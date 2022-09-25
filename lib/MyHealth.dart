@@ -9,6 +9,8 @@ class MyHealth extends StatefulWidget {
 class _MyHealthState extends State<MyHealth> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Container(),
+    );
   }
 }

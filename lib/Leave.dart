@@ -10,6 +10,8 @@ class Leave extends StatefulWidget {
 class _LeaveState extends State<Leave> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Container(),
+    );
   }
 }

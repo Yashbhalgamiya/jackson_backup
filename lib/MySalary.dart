@@ -10,6 +10,8 @@ class MySalary extends StatefulWidget {
 class _MySalaryState extends State<MySalary> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+        body: Container(),
+    );
   }
 }

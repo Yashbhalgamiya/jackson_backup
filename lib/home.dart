@@ -3,6 +3,10 @@ import 'package:jackson_app/ProfilePage.dart';
 import 'package:jackson_app/Registration/Login.dart';
 import 'package:jackson_app/my_drawer_header.dart';
 import 'package:jackson_app/MyHealth.dart';
+import 'package:jackson_app/MyAttendance.dart';
+import 'package:jackson_app/Leave.dart';
+import 'package:jackson_app/MySalary.dart';
+import 'package:jackson_app/MyShift.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Home extends StatefulWidget {
@@ -118,63 +122,73 @@ class _HomeState extends State<Home> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      padding: EdgeInsets.only(top: 20.0),
-                      height: 190,
-                      width: 170,
-                      decoration: BoxDecoration(
-                          color: Colors.lightBlue,
-                          borderRadius:
-                          BorderRadius.all(Radius.circular(10.0))),
-                      child: Column(
-                        children: [
-                          CircleAvatar(
-                            backgroundColor: Color(0xffE6E6E6),
-                            radius: 50,
-                            child: Icon(
-                              Icons.time_to_leave,
-                              size: 80,
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Leave()));
+                      },
+                      child: Container(
+                        padding: EdgeInsets.only(top: 20.0),
+                        height: 190,
+                        width: 170,
+                        decoration: BoxDecoration(
+                            color: Colors.lightBlue,
+                            borderRadius:
+                            BorderRadius.all(Radius.circular(10.0))),
+                        child: Column(
+                          children: [
+                            CircleAvatar(
+                              backgroundColor: Color(0xffE6E6E6),
+                              radius: 50,
+                              child: Icon(
+                                Icons.time_to_leave,
+                                size: 80,
+                              ),
                             ),
-                          ),
-                          SizedBox(height: 10.0,),
-                          Text("Leave",
-                            style: TextStyle(
-                                fontSize: 30,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold
-                            ),)
-                        ],
+                            SizedBox(height: 10.0,),
+                            Text("Leave",
+                              style: TextStyle(
+                                  fontSize: 30,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold
+                              ),)
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(
                       width: 20.0,
                     ),
-                    Container(
-                      padding: EdgeInsets.only(top: 20.0),
-                      height: 190,
-                      width: 170,
-                      decoration: BoxDecoration(
-                          color: Colors.lightBlue,
-                          borderRadius:
-                          BorderRadius.all(Radius.circular(10.0))),
-                      child: Column(
-                        children: [
-                          CircleAvatar(
-                            backgroundColor: Color(0xffE6E6E6),
-                            radius: 50,
-                            child: Icon(
-                              Icons.monetization_on,
-                              size: 80,
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>MySalary()));
+                      },
+                      child: Container(
+                        padding: EdgeInsets.only(top: 20.0),
+                        height: 190,
+                        width: 170,
+                        decoration: BoxDecoration(
+                            color: Colors.lightBlue,
+                            borderRadius:
+                            BorderRadius.all(Radius.circular(10.0))),
+                        child: Column(
+                          children: [
+                            CircleAvatar(
+                              backgroundColor: Color(0xffE6E6E6),
+                              radius: 50,
+                              child: Icon(
+                                Icons.monetization_on,
+                                size: 80,
+                              ),
                             ),
-                          ),
-                          SizedBox(height: 10.0,),
-                          Text("Salary",
-                            style: TextStyle(
-                                fontSize: 30,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold
-                            ),)
-                        ],
+                            SizedBox(height: 10.0,),
+                            Text("Salary",
+                              style: TextStyle(
+                                  fontSize: 30,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold
+                              ),)
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -185,63 +199,73 @@ class _HomeState extends State<Home> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      padding: EdgeInsets.only(top: 20.0),
-                      height: 190,
-                      width: 170,
-                      decoration: BoxDecoration(
-                          color: Colors.lightBlue,
-                          borderRadius:
-                          BorderRadius.all(Radius.circular(10.0))),
-                      child: Column(
-                        children: [
-                          CircleAvatar(
-                            backgroundColor: Color(0xffE6E6E6),
-                            radius: 50,
-                            child: Icon(
-                              Icons.calendar_month_outlined,
-                              size: 80,
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>MyAttendance()));
+                      },
+                      child: Container(
+                        padding: EdgeInsets.only(top: 20.0),
+                        height: 190,
+                        width: 170,
+                        decoration: BoxDecoration(
+                            color: Colors.lightBlue,
+                            borderRadius:
+                            BorderRadius.all(Radius.circular(10.0))),
+                        child: Column(
+                          children: [
+                            CircleAvatar(
+                              backgroundColor: Color(0xffE6E6E6),
+                              radius: 50,
+                              child: Icon(
+                                Icons.calendar_month_outlined,
+                                size: 80,
+                              ),
                             ),
-                          ),
-                          SizedBox(height: 10.0,),
-                          Text("Attendance",
-                            style: TextStyle(
-                                fontSize: 30,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold
-                            ),)
-                        ],
+                            SizedBox(height: 10.0,),
+                            Text("Attendance",
+                              style: TextStyle(
+                                  fontSize: 30,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold
+                              ),)
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(
                       width: 20.0,
                     ),
-                    Container(
-                      padding: EdgeInsets.only(top: 20.0),
-                      height: 190,
-                      width: 170,
-                      decoration: BoxDecoration(
-                          color: Colors.lightBlue,
-                          borderRadius:
-                          BorderRadius.all(Radius.circular(10.0))),
-                      child: Column(
-                        children: [
-                          CircleAvatar(
-                            backgroundColor: Color(0xffE6E6E6),
-                            radius: 50,
-                            child: Icon(
-                              Icons.more_time,
-                              size: 80,
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>MyShift()));
+                      },
+                      child: Container(
+                        padding: EdgeInsets.only(top: 20.0),
+                        height: 190,
+                        width: 170,
+                        decoration: BoxDecoration(
+                            color: Colors.lightBlue,
+                            borderRadius:
+                            BorderRadius.all(Radius.circular(10.0))),
+                        child: Column(
+                          children: [
+                            CircleAvatar(
+                              backgroundColor: Color(0xffE6E6E6),
+                              radius: 50,
+                              child: Icon(
+                                Icons.more_time,
+                                size: 80,
+                              ),
                             ),
-                          ),
-                          SizedBox(height: 10.0,),
-                          Text("Shift",
-                            style: TextStyle(
-                                fontSize: 30,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold
-                            ),)
-                        ],
+                            SizedBox(height: 10.0,),
+                            Text("Shift",
+                              style: TextStyle(
+                                  fontSize: 30,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold
+                              ),)
+                          ],
+                        ),
                       ),
                     ),
                   ],
