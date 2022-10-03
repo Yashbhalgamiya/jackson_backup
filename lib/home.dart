@@ -33,6 +33,13 @@ class _HomeState extends State<Home> {
           padding: EdgeInsets.only(left: 100,right: 100),
           child: Text("Dashboard"),
         ),
+        actions: <Widget>[
+          IconButton(onPressed: (){
+
+            deleteSession();
+            Navigator.pushNamed(context, 'login');
+          }, icon: Icon(Icons.logout_rounded,color: Colors.white,)),
+        ],
       ),
       body: SafeArea(
         child: Row(

@@ -12,9 +12,10 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   GlobalKey<FormState> _Formkey=GlobalKey<FormState>();
   @override
-  void initState() {
+  void initState(){
     // TODO: implement initState
-    checkSession();
+
+   
   }
   @override
   Widget build(BuildContext context) {
@@ -75,7 +76,7 @@ class _LoginState extends State<Login> {
                               child: MaterialButton(
                                 color: Colors.blue,
                                 onPressed: (){
-                                  if(usernameController != null && usernameController.text=="Yash" && passwordController!=null && passwordController.text=="yash@2810"){
+                                  if(usernameController.text.isNotEmpty && usernameController.text=="Yash" && passwordController.text.isNotEmpty && passwordController.text=="yash@2810"){
                                     Navigator.push(context,
                                         MaterialPageRoute(builder: (context)=>Home())
                                     );
@@ -111,14 +112,5 @@ class _LoginState extends State<Login> {
   {
     final prefs=await SharedPreferences.getInstance();
     prefs.setString("Status", "LoggedIn");
-  }
-  checkSession() async
-  {
-    final prefs= await SharedPreferences.getInstance();
-    if(prefs.getString("Status").toString().isNotEmpty)
-      {
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
-      }
-
   }
 }
