@@ -23,16 +23,22 @@ class _HomeState extends State<Home> {
     var container;
     if(currentPage  ==DrawerSelections.Logout)
       {
-        container=Login();
+        Navigator.push(context,MaterialPageRoute(builder: (context)=>Login()));
       }
 
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.lightBlue,
-        title: Padding(
-          padding: EdgeInsets.only(left: 100,right: 100),
-          child: Text("Dashboard"),
-        ),
+          centerTitle: true,
+          title: FittedBox(
+              fit: BoxFit.fitWidth,
+              child: Text('Dashboard',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25
+                ),
+              )
+          ),
         actions: <Widget>[
           IconButton(onPressed: (){
 
@@ -322,14 +328,14 @@ class _HomeState extends State<Home> {
             child: Row(
               children: [
                 Expanded(
-                    flex: 1,
                     child: Text(
                       title,
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 25,
                           fontWeight: FontWeight.bold),
-                    )),
+                    ),
+                ),
               ],
             ),
           )),

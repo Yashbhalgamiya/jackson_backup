@@ -12,18 +12,19 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.lightBlue,
-        title: Padding(
-          padding: const EdgeInsets.only(left: 100.0,right: 100),
-          child: Text("Profile",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-
-            ),
+        appBar: AppBar(
+          backgroundColor: Colors.lightBlue,
+          centerTitle: true,
+          title: FittedBox(
+              fit: BoxFit.fitWidth,
+              child: Text('Profile',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25
+                ),
+              )
           ),
         ),
-      ),
         body: SafeArea(
               child: Center(
                 child: Padding(

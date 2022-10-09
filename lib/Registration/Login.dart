@@ -38,67 +38,70 @@ class _LoginState extends State<Login> {
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.all(Radius.circular(10.0))),
-                  child: Container(
-                      margin:
-                          EdgeInsets.only(left: 10.0, top: 8.0, right: 10.0),
-                      child:  Column(
-                          children: [
-                            TextField(
-                              controller: usernameController,
-                              decoration: InputDecoration(
+                  child: SingleChildScrollView(
+                    child: Container(
+                        margin:
+                            EdgeInsets.only(left: 10.0, top: 8.0, right: 10.0),
+                        child:  Column(
+                            children: [
+                              TextField(
+                                controller: usernameController,
+                                decoration: InputDecoration(
+                                    fillColor: Colors.grey.shade100,
+                                    filled: true,
+                                    hintText: 'Username',
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),),
+
+                              ),
+                              SizedBox(
+                                height: 20.0,
+                              ),
+                              TextField(
+                                controller: passwordController,
+                                obscureText: true,
+                                decoration: InputDecoration(
                                   fillColor: Colors.grey.shade100,
                                   filled: true,
-                                  hintText: 'Username',
+                                  hintText: 'Password',
                                   border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),),
+                                      borderRadius: BorderRadius.circular(10)),
+                                ),
 
-                            ),
-                            SizedBox(
-                              height: 20.0,
-                            ),
-                            TextField(
-                              controller: passwordController,
-                              obscureText: true,
-                              decoration: InputDecoration(
-                                fillColor: Colors.grey.shade100,
-                                filled: true,
-                                hintText: 'Password',
-                                border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10)),
+                              ),
+                              SizedBox(
+                                height: 20.0,
                               ),
 
-                            ),
-                            SizedBox(
-                              height: 20.0,
-                            ),
-                            Center(
-                              child: MaterialButton(
-                                color: Colors.blue,
-                                onPressed: (){
-                                  if(usernameController.text.isNotEmpty && usernameController.text=="Yash" && passwordController.text.isNotEmpty && passwordController.text=="yash@2810"){
-                                    Navigator.push(context,
-                                        MaterialPageRoute(builder: (context)=>Home())
-                                    );
-                                    saveSession();
-                                  }
+                              Center(
+                                child: MaterialButton(
+                                  color: Colors.blue,
+                                  onPressed: (){
+                                    if(usernameController.text.isNotEmpty && usernameController.text=="Yash" && passwordController.text.isNotEmpty && passwordController.text=="yashyash"){
+                                      Navigator.push(context,
+                                          MaterialPageRoute(builder: (context)=>Home())
+                                      );
+                                      saveSession();
+                                    }
 
-                                },
-                                child: Text(
-                                  'Login',
-                                  style: TextStyle(
-                                    fontSize: 20.0,
-                                    color: Colors.white
+                                  },
+                                  child: Text(
+                                    'Login',
+                                    style: TextStyle(
+                                      fontSize: 20.0,
+                                      color: Colors.white
+                                    ),
                                   ),
-                                ),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10.0)
-                                ),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0)
+                                  ),
+                                )
                               )
-                            )
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
+                  ),
                 ),
               ),
             ],

@@ -10,6 +10,20 @@ class Family_Info extends StatefulWidget {
 class _Family_InfoState extends State<Family_Info> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Container());
+    return Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.lightBlue,
+          centerTitle: true,
+          title: FittedBox(
+              fit: BoxFit.fitWidth,
+              child: Text('Profile',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25
+                ),
+              )
+          ),
+        ),
+        body: Container());
   }
 }

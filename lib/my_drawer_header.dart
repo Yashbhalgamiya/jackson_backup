@@ -23,9 +23,10 @@ class _MyHeaderDrawerState extends State<MyHeaderDrawer> {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               image: DecorationImage(
-                image: AssetImage('assets/images/profile.png'),
+                image: AssetImage('images/profile.png'),
               )
             ),
+
           ),
           Text("Username",
           style: TextStyle(
